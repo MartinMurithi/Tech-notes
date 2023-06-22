@@ -8,7 +8,7 @@ const logEvents = async (message, logFileName) => {
     const dateTime = `${format(new Date(), 'yyyy-MM-dd\tHH:mm:ss')}`;
     const logItem = `${uuid()}\t${dateTime}\t${message}\n`;
 
-    // check if te directory exists
+    // check if the directory exists
     if (!fs.existsSync(path.join(__dirname, '..', 'logs'))) {
         fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
     }
